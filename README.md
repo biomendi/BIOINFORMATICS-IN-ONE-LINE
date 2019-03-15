@@ -1,6 +1,6 @@
 # Bioinformatics in one line
 
-Collection of useful commands for bioinformatics purposes
+Collection of useful commands for bioinformatics purposes.
 
 ## FASTA 
 
