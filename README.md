@@ -15,3 +15,9 @@ Count bases (A, C, G, T) and missing data (N, ?) in single-line Fasta
 ```bash
 while read line; do echo $line | grep -v '>' | grep -o "[ACGT]" | sort | uniq -c | paste - - - - | tr "\n" "\t" ;  echo $line | grep -v '>' | grep -o "[?N]" | sort | uniq -c | sort -k2r | paste - - ; echo $line | grep '>' | tr "\n" "\t" ; done < INPUT.fasta
 ```
+
+Count total number of bases in Fasta  
+
+```bash
+grep -v ">" INPUT.fasta | wc | awk '{print $3-$1}'
+```
