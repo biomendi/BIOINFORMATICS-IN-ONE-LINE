@@ -1,6 +1,6 @@
-# BIOINFORMATICS-IN-ONE-LINE
+# Bioinformatics in one line
 
-This is a collection of useful commands for bioinformatics purposes
+Collection of useful commands for bioinformatics purposes
 
 
 
