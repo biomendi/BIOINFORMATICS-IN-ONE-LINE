@@ -1,7 +1,9 @@
-## BIOINFORMATICS-IN-ONE-LINE
-
-This is a Collection of useful commands for bioinformatics purposes
-
+# BIOINFORMATICS-IN-ONE-LINE
+.
+.
+This is a collection of useful commands for bioinformatics purposes
+.
+.
 ### Convert multiple-line Fasta To single-line Fasta
 
 ```bash
