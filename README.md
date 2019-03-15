@@ -2,7 +2,7 @@
 
 Collection of useful commands for bioinformatics purposes
 
-## awk
+## FASTA 
 
 Convert multiple-line Fasta To single-line Fasta
 
