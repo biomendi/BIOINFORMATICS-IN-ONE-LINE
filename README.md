@@ -10,7 +10,7 @@ Convert multiple-line Fasta To single-line Fasta
 awk '/^>/ {printf("\n%s\n",$0);next; } { printf("%s",$0);}  END {printf("\n");}' < INPUT.fasta | tail -n +2 > OUTPUT.fasta 
 ```
 
-Count bases (A, C, G, T) and missing data (N, ?) per sample in single-line Fasta
+Count bases (A, C, G, T) and missing data (N, ?) per sample in single-line Fasta (slow for long files!)
 
 ```bash
 while read line; do echo $line | grep -v '>' | grep -o "[ACGT]" | sort | uniq -c | paste - - - - | tr "\n" "\t" ;  echo $line | grep -v '>' | grep -o "[?N]" | sort | uniq -c | sort -k2r | paste - - ; echo $line | grep '>' | tr "\n" "\t" ; done < INPUT.fasta
