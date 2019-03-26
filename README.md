@@ -16,17 +16,18 @@ Count total number of bases in Fasta (across all sequences)
 grep -v ">" INPUT.fasta | wc | awk '{print $3-$1}'
 ```
 
-## Analysis and visualization of phylogenetic trees*
-* Requires ete3 (http://etetoolkit.org/)
+## Analysis and visualization of phylogenetic trees
+Install ete3 (http://etetoolkit.org/)
 
 
 Fast way to display a tree in newick format
 ```bash
 ete3 view --text -t TREE.nw
 ```
-Compare tree topologies (a single tree oa list vs reference )
-
-
+Compare tree topologies (a list of trees vs reference tree)
+```bash
+ete3 compare --src_tree_list TREES.list -r REFERENCE.nw
+```
 
 ## Others
 Count the number of a specific character (e.g. "NA") in each line (prints also the 1st word, delimited by space)
