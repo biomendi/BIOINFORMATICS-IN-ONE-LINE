@@ -1,4 +1,4 @@
-# Bioinformatics in one line
+# BIOINFORMATICS IN ONE LINE
 
 Collection of useful commands for bioinformatics purposes. All in one line!
 
@@ -16,7 +16,10 @@ Count total number of bases in Fasta (across all sequences)
 grep -v ">" INPUT.fasta | wc | awk '{print $3-$1}'
 ```
 
-## Analysis and visualization of phylogenetic trees (requieres ete3)
+## Analysis and visualization of phylogenetic trees*
+* Requires ete3 (http://etetoolkit.org/)
+
+
 Fast way to display a tree in newick format
 ```bash
 ete3 view --text -t TREE.nw
