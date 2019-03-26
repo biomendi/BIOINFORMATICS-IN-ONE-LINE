@@ -2,16 +2,6 @@
 
 Collection of useful commands for bioinformatics purposes. All in one line!
 
-## Analysis and visualization of phylogenetic trees
-Fast way to display a tree in newick format
-```bash
-ete3 view --text -t TREE.nw
-```
-Compare tree topologies (a list of trees vs reference tree)
-```bash
-ete3 compare --src_tree_list TREES.list -r REFERENCE.nw
-```
-
 ## Fasta 
 Convert multiple-line Fasta To single-line Fasta
 ```bash
@@ -24,6 +14,16 @@ while read line; do echo $line | grep -v '>' | grep -o "[ACGT]" | sort | uniq -c
 Count total number of bases in Fasta (across all sequences)
 ```bash
 grep -v ">" INPUT.fasta | wc | awk '{print $3-$1}'
+```
+
+## Phylogenetic trees
+Fast way to display a tree in newick format
+```bash
+ete3 view --text -t TREE.nw
+```
+Compare tree topologies (a list of trees vs reference tree)
+```bash
+ete3 compare --src_tree_list TREES.list -r REFERENCE.nw
 ```
 
 ## Others
