@@ -17,9 +17,6 @@ grep -v ">" INPUT.fasta | wc | awk '{print $3-$1}'
 ```
 
 ## Analysis and visualization of phylogenetic trees
-Install ete3 (http://etetoolkit.org/)
-
-
 Fast way to display a tree in newick format
 ```bash
 ete3 view --text -t TREE.nw
