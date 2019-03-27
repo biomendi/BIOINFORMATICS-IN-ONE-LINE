@@ -19,6 +19,10 @@ Count number of sequences in FASTQ.gz file
 ```bash
 parallel “echo {} && gunzip -c {} | wc -l | awk ‘{d=\$1; print d/4;}’” ::: INPUT.gz
 ```
+Using a list of names (name.list: one sequence name per line), extract sequences from Fasta/FASTQ files (needs seqtk)
+```bash
+seqtk subseq INPUT.fq name.list > out.fq
+```
 
 ## Phylogenetic trees
 Fast way to display a tree in newick format (needs ete3)
