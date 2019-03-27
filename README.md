@@ -21,11 +21,11 @@ parallel “echo {} && gunzip -c {} | wc -l | awk ‘{d=\$1; print d/4;}’” :
 ```
 
 ## Phylogenetic trees
-Fast way to display a tree in newick format
+Fast way to display a tree in newick format (Requires ete3)
 ```bash
 ete3 view --text -t TREE.nw
 ```
-Compare topology of newick trees (a list of trees vs reference tree)
+Compare topology of a list of trees vs reference tree in newick format) (Requires ete3)
 ```bash
 ete3 compare --src_tree_list TREES.list -r REFERENCE.nw
 ```
