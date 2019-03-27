@@ -21,7 +21,7 @@ Fast way to display a tree in newick format
 ```bash
 ete3 view --text -t TREE.nw
 ```
-Compare tree topologies (a list of trees vs reference tree)
+Compare topology of newick trees (a list of trees vs reference tree)
 ```bash
 ete3 compare --src_tree_list TREES.list -r REFERENCE.nw
 ```
