@@ -2,7 +2,7 @@
 
 Collection of useful commands for bioinformatics purposes. All in one line!
 
-## Fasta 
+## Fasta / FASTQ
 Convert multiple-line Fasta To single-line Fasta
 ```bash
 awk '/^>/ {printf("\n%s\n",$0);next; } { printf("%s",$0);}  END {printf("\n");}' < INPUT.fasta | tail -n +2 > OUTPUT.fasta 
@@ -15,6 +15,10 @@ Count total number of bases in Fasta (across all sequences)
 ```bash
 grep -v ">" INPUT.fasta | wc | awk '{print $3-$1}'
 ```
+Count number of sequences in FASTQ.gz file
+```bash
+parallel “echo {} && gunzip -c {} | wc -l | awk ‘{d=\$1; print d/4;}’” ::: INPUT.gz
+```
 
 ## Phylogenetic trees
 Fast way to display a tree in newick format
@@ -24,6 +28,12 @@ ete3 view --text -t TREE.nw
 Compare topology of newick trees (a list of trees vs reference tree)
 ```bash
 ete3 compare --src_tree_list TREES.list -r REFERENCE.nw
+```
+
+## SNPs
+Count heterozygous SNPs in a beagle file
+```bash
+echo $(awk ‘{if ($3 != $4) print $3, $4 }’ INPUT.bgl | wc -l )/$total*100 | bc -l
 ```
 
 ## Others
