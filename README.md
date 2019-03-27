@@ -40,7 +40,7 @@ Count heterozygous SNPs in a beagle file
 echo $(awk ‘{if ($3 != $4) print $3, $4 }’ INPUT.bgl | wc -l )/$total*100 | bc -l
 ```
 
-## Others
+## Others (more general ones)
 Count the number of a specific character (e.g. "NA") in each line (prints also the 1st word, delimited by space)
 ```bash
 paste <(while read LINE ; do echo -n "$LINE" | awk -F" " '{print $1}' ; done < INPUT.file) <(awk -F\NA '{print NF-1}' INPUT.file)
@@ -48,4 +48,8 @@ paste <(while read LINE ; do echo -n "$LINE" | awk -F" " '{print $1}' ; done < I
 Compare two unsorted lists
 ```bash
 comm -13 <(sort file1) <(sort file2)
+```
+Delete all files with size 0 within a directory
+```bash
+find . -type f -empty -delete
 ```
