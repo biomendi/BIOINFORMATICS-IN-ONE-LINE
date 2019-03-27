@@ -25,15 +25,15 @@ seqtk subseq INPUT.fq name.list > out.fq
 ```
 
 ## Phylogenetic trees
-Fast way to display a tree in newick format (needs ete3)
+Fast way to display a tree in newick format (needs 'ete3')
 ```bash
 ete3 view --text -t TREE.nw
 ```
-Compare topology of a list of trees vs reference tree (needs ete3)
+Compare topology of a list of trees vs reference tree (needs 'ete3')
 ```bash
 ete3 compare --src_tree_list TREES.list -r REFERENCE.nw
 ```
-Reroot newick tree (requieres newick_utils)
+Reroot newick tree (needs 'newick_utils')
 ```bash
 nw_reroot -l INPUT.tree OUTGROUP
 ```
