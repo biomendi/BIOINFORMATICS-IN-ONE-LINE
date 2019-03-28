@@ -1,6 +1,6 @@
 # BIOINFORMATICS IN ONE LINE
 
-Collection of useful commands for bioinformatics purposes. All in one line!
+There are many ways to solve a task. In bioinformatics, sometimes we need a simple way to get things done quick and easy. Here I have collected a list of useful commands for different bioinformatics purposes. All in one line!
 
 ## Fasta / FASTQ
 Convert multiple-line Fasta To single-line Fasta
