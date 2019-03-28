@@ -4,7 +4,7 @@ There are many ways to solve a task.
 
 Biologists sometimes need a simple way to get things done quick and easy. 
 
-Here is a list of commands which I find useful for different bioinformatics purposes.
+Here is a list of commands which I find useful for different bioinformatics purposes (more coming soon!).
 
 All in one line!
 
