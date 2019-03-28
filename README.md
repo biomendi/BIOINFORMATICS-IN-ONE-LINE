@@ -51,7 +51,7 @@ Compare two unsorted lists
 ```bash
 comm -13 <(sort file1) <(sort file2)
 ```
-Delete all files with size 0 within a directory
+Delete all files with size 0 in current directory
 ```bash
 find . -type f -empty -delete
 ```
