@@ -1,6 +1,12 @@
 # BIOINFORMATICS IN ONE LINE
 
-There are many ways to solve a task. In bioinformatics, sometimes we need a simple way to get things done quick and easy. Here I will be gathering useful commands for different bioinformatics purposes. All in one line!
+There are many ways to solve a task. 
+
+In bioinformatics, sometimes we need a simple way to get things done quick and easy. 
+
+Here, I will be gathering commands which I find useful for different bioinformatics purposes. 
+
+All in one line!
 
 ## Fasta / FASTQ
 Convert multiple-line Fasta To single-line Fasta
