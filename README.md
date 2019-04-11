@@ -25,6 +25,12 @@ Using a list of identifiers (one sequence name per line), extract sequences from
 seqtk subseq INPUT.fq name.list > out.fq
 ```
 
+## Alignments
+For a particular sample in a phylip alignment, count occurrences of a single character (eg. "A")
+```bash
+grep "SAMPLE" ALIGNMENT.phylip | awk '{print $2}' | awk -F"A" '{print NF-1}' 
+```
+
 ## Phylogenetic trees
 Fast way to display a tree in newick format (needs 'ete3')
 ```bash
