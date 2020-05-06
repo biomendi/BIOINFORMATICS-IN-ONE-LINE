@@ -53,7 +53,7 @@ echo $(awk ‘{if ($3 != $4) print $3, $4 }’ INPUT.bgl | wc -l )/$total*100 | 
 ```
 
 ## Others 
-#### General ones:
+#### General use:
 Compare two unsorted lists
 ```bash
 comm -13 <(sort file1) <(sort file2)
@@ -71,7 +71,7 @@ Fast way (multi-core) to compress big files (using pigz)
 tar cf - paths-to-archive | pigz -9 -p 32 > archive.tar.gz
 ```
 
-#### Specific ones: 
+#### Specific use: 
 Count the number of a specific character (e.g. "NA") in each line (prints also the 1st word, delimited by space)
 ```bash
 paste <(while read LINE ; do echo -n "$LINE" | awk -F" " '{print $1}' ; done < INPUT.file) <(awk -F\NA '{print NF-1}' INPUT.file)
