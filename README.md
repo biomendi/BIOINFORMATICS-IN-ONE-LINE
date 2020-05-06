@@ -1,6 +1,6 @@
 # BIOINFORMATICS IN ONE LINE
 
-In biology, there are many ways to solve a task. However, biologists sometimes need simple ways to get easy tasks done quick - without actually compromising efficiency and accuracy. If that is what you need, this page might help you. Over the years, I used many one-line commands and found myself re-using them many times. I gathered some commands which I find useful for different bioinformatics purposes in the following list. Of course, all in one line. Cheers!
+In biology, there are many ways to solve a task. However, biologists sometimes need simple ways to get easy tasks done quick - without actually compromising efficiency and accuracy. If that is what you need, the following list might help you. Below I have gathered some commands which I did wrote or find useful to solve different bioinformatics problems. Be aware that some of these scripts are perhaps a bit too specific, so bear that in mind when using them for your own work.    
 
 
 ## Fasta / FASTQ
