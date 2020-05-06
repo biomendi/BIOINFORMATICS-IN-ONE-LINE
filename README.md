@@ -66,6 +66,10 @@ Remove extension (e.g. ".txt") for multiple files
 ```bash
 find -type f -name '*.txt' | while read f; do mv "$f" "${f%.txt}"; done
 ```
+Fast way (multi-core) to compress big files (using pigz)
+```bash
+tar cf - paths-to-archive | pigz -9 -p 32 > archive.tar.gz
+```
 
 #### Specific ones: 
 Count the number of a specific character (e.g. "NA") in each line (prints also the 1st word, delimited by space)
