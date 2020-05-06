@@ -66,9 +66,11 @@ Remove extension (e.g. ".txt") for multiple files
 ```bash
 find -type f -name '*.txt' | while read f; do mv "$f" "${f%.txt}"; done
 ```
-Fast way (multi-core) to compress and decompress big files (using pigz)
+Fast way (multi-core) to compress or decompress big files (using pigz)
 ```bash
 tar cf - paths-to-archive | pigz -9 -p 32 > archive.tar.gz
+```
+```bash
 pigz -dc target.tar.gz | tar xf -
 ```
 
