@@ -62,6 +62,10 @@ Delete all files with size 0 in current directory
 ```bash
 find . -type f -empty -delete
 ```
+Add extension (e.g. ".tre") to multiple files
+```bash
+find . -type f -print0 | xargs -0 -I{} mv "{}" "{}".tre
+```
 Remove extension (e.g. ".txt") for multiple files
 ```bash
 find -type f -name '*.txt' | while read f; do mv "$f" "${f%.txt}"; done
