@@ -24,6 +24,14 @@ Using a list of identifiers (one sequence name per line), extract sequences from
 ```bash
 seqtk subseq INPUT.fq name.list > out.fq
 ```
+Parse a Fasta (useful to modify identifiers) 
+```bash
+awk '/^>/{printf $0"\n",++i; next}{print}' INPUT.fasta
+```
+Sequence length from Fasta 
+```bash
+cat INPUT.fasta|awk '$0 ~ ">" {if (NR > 1) {print c;} c=0;printf substr($0,2,200) "\t"; } $0 !~ ">" {c+=length($0);} END { print c; }'
+```
 
 ## Alignments
 For a particular sample in a phylip alignment, count occurrences of a single character (eg. "A")
