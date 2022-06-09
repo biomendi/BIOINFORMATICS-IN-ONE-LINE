@@ -85,6 +85,10 @@ tar cf - paths-to-archive | pigz -9 -p 32 > archive.tar.gz
 ```bash
 pigz -dc target.tar.gz | tar xf -
 ```
+Sum a column of numbers
+```bash
+<cmd> | paste -sd+ | bc
+```
 
 #### Specific use: 
 Count the number of a specific character (e.g. "NA") in each line (prints also the 1st word, delimited by space)
